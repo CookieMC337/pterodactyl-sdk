@@ -2,6 +2,7 @@
 
 Copyright (c) 2018 FruitBytes\
 Copyright (c) 2020 HCGCloud
+Copyright (c) 2023 Vexura
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
