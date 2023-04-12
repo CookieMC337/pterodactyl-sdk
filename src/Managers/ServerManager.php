@@ -11,12 +11,12 @@ class ServerManager extends Manager
     /**
      * Get a paginated collection of servers.
      *
-     * @param int   $page
+     * @param int $page
      * @param array $query
      *
      * @return Collection
      */
-    public function paginate(int $page = 1, array $query = [])
+    public function paginate($page = 1, array $query = [])
     {
         switch ($this->apiType) {
             case 'application':

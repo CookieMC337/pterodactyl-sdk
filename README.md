@@ -13,7 +13,7 @@
 
 There is no stable [version](https://github.com/hcgcloud/pterodactyl-sdk/releases) and full [documentation](https://hcgcloud.github.io/pterodactyl-sdk-docs-v2/) for `v2` yet, you may need to read the source code to use this sdk.
 ```bash
-composer require vexura/pterodactyl-sdk:v2.0.0-alpha.2
+composer require vexura/pterodactyl-sdk:dev-develop
 ```
 
 ---
