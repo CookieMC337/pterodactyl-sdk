@@ -11,7 +11,7 @@ use HCGCloud\Pterodactyl\Managers\NestManager;
 use HCGCloud\Pterodactyl\Managers\Node\NodeAllocationManager;
 use HCGCloud\Pterodactyl\Managers\NodeManager;
 use HCGCloud\Pterodactyl\Managers\Server\ServerDatabaseManager;
-use HCGCloud\Pterodactyl\Managers\Server\ServerFileManager;
+use HCGCloud\Pterodactyl\Managers\Server\ServerFilesManager;
 use HCGCloud\Pterodactyl\Managers\ServerManager;
 use HCGCloud\Pterodactyl\Managers\UserManager;
 
@@ -107,10 +107,15 @@ class Pterodactyl
      * @var ServerDatabaseManager
      */
     public $server_databases;
+
+
     /**
-     * @var ServerFileManager
+     * Server files manager.
+     *
+     * @var ServerFilesManager
      */
-    private $server_filemanager;
+    public $server_files;
+
 
     /**
      * Create a new Pterodactyl instance.
@@ -142,7 +147,6 @@ class Pterodactyl
         $this->account = new AccountManager($this);
         $this->servers = new ServerManager($this);
         $this->server_databases = new ServerDatabaseManager($this);
-        $this->server_filemanager = new ServerFileManager($this);
-
+        $this->server_files = new ServerFilesManager($this);
     }
 }

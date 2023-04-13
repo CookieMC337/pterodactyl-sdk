@@ -17,7 +17,7 @@ class ServerDatabaseManager extends Manager
      *
      * @return Collection
      */
-    public function paginate($serverId, $page = 1, array $query = [])
+    public function paginate($serverId, int $page = 1, array $query = [])
     {
         return $this->http->get("servers/$serverId/databases", array_merge([
             'page' => $page,

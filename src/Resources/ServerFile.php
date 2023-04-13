@@ -2,6 +2,6 @@
 
 namespace HCGCloud\Pterodactyl\Resources;
 
-class ServerFilemanager extends Resource
+class ServerFile extends Resource
 {
 }

@@ -11,24 +11,24 @@ class ServerManager extends Manager
     /**
      * Get a paginated collection of servers.
      *
-     * @param int $page
+     * @param int   $page
      * @param array $query
      *
      * @return Collection
      */
-    public function paginate($page = 1, array $query = [])
+    public function paginate(int $page = 1, array $query = [])
     {
         switch ($this->apiType) {
             case 'application':
                 return $this->http->get('servers', array_merge([
                     'page' => $page,
                 ], $query));
-            break;
+                break;
             case 'client':
                 return $this->http->get('', array_merge([
                     'page' => $page,
                 ], $query));
-            break;
+                break;
         }
     }
 
@@ -107,6 +107,19 @@ class ServerManager extends Manager
     public function updateStartup(int $serverId, array $data)
     {
         return $this->http->patch("servers/$serverId/startup", [], $data);
+    }
+
+    /**
+     * Get startup details of a specified server.
+     *
+     * @param string   $serverId
+     * @param array $data
+     *
+     * @return void
+     */
+    public function getStartup(string $serverId)
+    {
+        return $this->http->get("servers/$serverId/startup");
     }
 
     /**
@@ -218,8 +231,8 @@ class ServerManager extends Manager
     {
         return $this->http->post("servers/$serverId/power", [], ['signal' => $signal]);
     }
-    
-     /**
+
+    /**
      * Backup a server
      *
      * @param string $serverId
